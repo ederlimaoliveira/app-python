@@ -12,7 +12,7 @@ def hello():
     return "Hello World"
 
 @app.route("/eder")
-def hello_name(name):
+def hello_name(eder, name="eder"):
     return "Hello " + name
 
 #@app.route("/todo", method=["POST"])                   # at the end point /
