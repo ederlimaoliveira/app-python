@@ -15,9 +15,9 @@ def hello():
 def hello_name(eder, name="eder"):
     return "Hello " + name
 
-#@app.route("/todo", method=["POST"])                   # at the end point /
-#def create_todo():
-#    return ToDoService().create(request.get_json())
+@app.route("/todo", methods=["POST"])                   # at the end point /
+def create_todo():
+    return ToDoService().create(request.get_json())
 
 def hello():                      # call method hello
     return "Hello World!"         # which returns "hello world"
