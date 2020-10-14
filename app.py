@@ -1,10 +1,18 @@
 # app.py
-from flask import Flask           # import flask
+from flask import Flask  # import flask
+
+from models import Schema
+
+from service import ToDoService
 app = Flask(__name__)             # create an app instance
 
-@app.route("/")                   # at the end point /
+@app.route("/todo", method=["POST"])                   # at the end point /
+def create_todo():
+    return ToDoService().create(request.get_json())
+
 def hello():                      # call method hello
     return "Hello World!"         # which returns "hello world"
 
 if __name__ == "__main__":        # on running python app.py
-    app.run()                     # run the flask app
+    Schema()
+    app.run(debug=True)                     # run the flask app
