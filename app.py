@@ -6,9 +6,18 @@ from models import Schema
 from service import ToDoService
 app = Flask(__name__)             # create an app instance
 
-@app.route("/todo", method=["POST"])                   # at the end point /
-def create_todo():
-    return ToDoService().create(request.get_json())
+
+@app.route("/")
+def hello():
+    return "Hello World"
+
+@app.route("/eder")
+def hello_name(name):
+    return "Hello "+ name
+
+#@app.route("/todo", method=["POST"])                   # at the end point /
+#def create_todo():
+#    return ToDoService().create(request.get_json())
 
 def hello():                      # call method hello
     return "Hello World!"         # which returns "hello world"

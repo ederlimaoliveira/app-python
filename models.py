@@ -1,3 +1,4 @@
+import sqlite3
 class Schema:
     def __init__(self):
         self.conn = sqlite3.connect('todo.db')
