@@ -21,7 +21,8 @@ class Schema:
         );
         """
 
-        self.conn.execute(query)    def create_user_table(self):
+        self.conn.execute(query)
+    def create_user_table(self):
         # create user table in similar fashion
         # come on give it a try it's okay if you make mistakes
         pass
