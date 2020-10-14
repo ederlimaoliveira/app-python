@@ -24,4 +24,4 @@ def hello():                      # call method hello
 
 if __name__ == "__main__":        # on running python app.py
     Schema()
-    app.run(debug=True)                     # run the flask app
+    app.run(debug=True, host='0.0.0.0', port=8080)                     # run the flask app
